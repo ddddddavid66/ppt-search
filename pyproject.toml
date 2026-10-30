@@ -1,0 +1,11 @@
+[project]
+name = "ppt-search"
+version = "1.0.0"
+description = "离线批量搜索 PowerPoint，保留实际页码并跳转原页"
+requires-python = ">=3.11"
+dependencies = ["python-pptx==1.0.2", "PySide6-Essentials==6.8.3", "pywin32>=308; sys_platform == 'win32'"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+qt_api = "pyside6"
+markers = ["office: requires a local Microsoft PowerPoint installation"]
